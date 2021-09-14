@@ -1,24 +1,78 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
+| Colum              | Type   | Options     
+| ------------------ | ------ | -----------
+| name               | string | null: false
+| email              | string | null: false
+| encrypted_password | string | null: false
 
-Things you may want to cover:
+### association
+has_many :shops
+has_many :restaurants
+has_many :spots
+has_many :comments
 
-* Ruby version
 
-* System dependencies
+## shops テーブル
+| Colum              | Type       | Options     
+| ------------------ | ---------- | ----------
+| shop_text          | text       | null: false
+| shop_name          | string     | null: false
+| user               | references | null: false, foreign_key: true
 
-* Configuration
+### association
+belongs_to :user
+has_many :comments
 
-* Database creation
 
-* Database initialization
+## restaurants テーブル
+| Colum              | Type       | Options     
+| ------------------ | ---------- | ----------
+| restaurant_text    | text       | null: false
+| restaurant_name    | string     | null: false
+| user               | references | null: false, foreign_key: true
 
-* How to run the test suite
+### association
+belongs_to :user
+has_many :comments
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## spots テーブル
+| Colum              | Type       | Options     
+| ------------------ | ---------- | ----------
+| spot_text          | text       | null: false
+| spot_name          | string     | null: false
+| user               | references | null: false, foreign_key: true
 
-* ...
+### association
+belongs_to :user
+has_many :comments
+
+
+## comments テーブル
+| Colum              | Type       | Options     
+| ------------------ | ---------- | ----------
+| comment_text       | text       | null: false
+| user               | references | null: false, foreign_key: true
+| shop               | references | null: false, foreign_key: true
+| restaurant         | references | null: false, foreign_key: true
+| spot               | references | null: false, foreign_key: true
+
+### association
+belongs_to :user
+belongs_to :shop
+belongs_to :restaurant
+belongs_to :spot
+
+
+## genre テーブル
+| Colum              | Type       | Options     
+| ------------------ | ---------- | ----------
+| shop               | references | null: false, foreign_key: true
+| restaurant         | references | null: false, foreign_key: true
+| spot               | references | null: false, foreign_key: true
+
+has_many :shops
+has_many :restaurants
+has_many :spots

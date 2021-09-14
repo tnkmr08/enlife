@@ -1,0 +1,43 @@
+<%= render 'shared/header' %>
+
+<div class='main'>
+  <div class='newest-post'> 
+    <%= link_to 'restaurant' %>
+    <hr class="border-line" />
+    <% @restaurants.each do |restaurant| %>
+      <%= link_to restaurant.user.name, user_path(restaurant.user.id) %>
+      <%= restaurant.place_name %>
+      <div class='image'>
+        <%= image_tag restaurant.image, class: 'post-img' %>
+      </div>
+    <% end %>
+  </div> 
+</div>   
+
+<div class='main'>
+  <div class='newest-post'> 
+    <%= link_to 'shop' %>
+    <hr class="border-line" />
+    <% @shops.each do |shop| %>
+      <%= link_to shop.user.name, user_path(shop.user.id) %>
+      <%= shop.place_name %>
+      <div class='image'>
+        <%= image_tag shop.image, class: 'post-img' %>
+      </div>
+    <% end %>
+  </div> 
+</div>   
+
+<div class='main'>
+  <div class='newest-post'> 
+    <%= link_to 'spot' %>
+    <hr class="border-line" />
+    <% @spots.each do |spot| %>
+      <%= link_to spot.user.name, user_path(spot.user.id) %>
+      <%= spot.place_name %>
+      <div class='image'>
+        <%= image_tag spot.image, class: 'post-img' %>
+      </div>
+    <% end %>
+  </div> 
+</div>   
