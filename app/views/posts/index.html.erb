@@ -1,8 +1,8 @@
 <%= render 'shared/header' %>
 
-<div class='main'>
+<div class='main-top'>
   <div class='newest-post'> 
-    <%= link_to 'restaurant' %>
+    <%= link_to 'restaurant', restaurants_path, class: 'category-name' %>
     <hr class="border-line" />
     <% @restaurants.each do |restaurant| %>
       <%= link_to restaurant.user.name, user_path(restaurant.user.id) %>
@@ -14,9 +14,9 @@
   </div> 
 </div>   
 
-<div class='main'>
+<div class='main-top'>
   <div class='newest-post'> 
-    <%= link_to 'shop' %>
+    <%= link_to 'shop', shops_path, class: 'category-name' %>
     <hr class="border-line" />
     <% @shops.each do |shop| %>
       <%= link_to shop.user.name, user_path(shop.user.id) %>
@@ -28,9 +28,9 @@
   </div> 
 </div>   
 
-<div class='main'>
+<div class='main-top'>
   <div class='newest-post'> 
-    <%= link_to 'spot' %>
+    <%= link_to 'spot', spots_path, class: 'category-name' %>
     <hr class="border-line" />
     <% @spots.each do |spot| %>
       <%= link_to spot.user.name, user_path(spot.user.id) %>

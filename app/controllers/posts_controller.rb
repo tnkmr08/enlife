@@ -19,6 +19,10 @@ class PostsController < ApplicationController
     end  
   end
 
+  def show
+    render "posts/#{params[:name]}"
+  end
+
   private
   def post_params
     params.require(:post).permit(:text, :category_id, :place_name, :image).merge(user_id: current_user.id)

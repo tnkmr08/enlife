@@ -1,0 +1,12 @@
+<%= render 'shared/header' %> 
+
+<div class='main'>
+ <h2>spot</h2>
+ <hr class="border-line" />
+
+ <ul class='post-lists'>
+   <li class='list'>
+     <%= render partial: 'posts/spot', collection: @spots %>
+   </li>
+ </ul>  
+</div>
