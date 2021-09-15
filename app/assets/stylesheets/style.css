@@ -52,6 +52,30 @@
   color: #0000FF;
 }
 
+/* ユーザー詳細 */
+.user-main {
+  margin: 70px 220px 0;
+}
+
+.user-border-line {
+  border-width: 1px 0 0 0;
+  margin: 10px 0 20px ;
+  border-style: solid;
+  border-color: #ddd;
+}
+
+.post.lists{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.img {
+  width: 250px;
+  height: 255px;
+}
+
 /* ヘッダー */
 .header {
   background-color: rgba(244, 245, 241, 0.767);
