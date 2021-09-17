@@ -30,12 +30,12 @@
       <% end %>
     </div>
   </div> 
-<%#</div>   
+<%#</div>  %> 
 
-<div class='main-top'>
+<%#<div class='main-top'>%>
   <div class='newest-post'> 
     <%= link_to 'spot', spots_path, class: 'category-name' %>
-    <%#<hr class="border-line" />%>
+    <hr class="border-line" />
 
     <div class='slider'>
       <% @spots.each do |spot| %>
@@ -44,5 +44,5 @@
         <%= image_tag spot.image, class: 'post-img' %>
       <% end %>
     </div>
-  <%#</div> 
-</div>   
+  </div> 
+<%#</div>   
