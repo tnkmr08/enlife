@@ -1,0 +1,34 @@
+var modal = document.getElementById('modal')
+var mask = document.getElementById('mask')
+
+modal.innerHTML = '<%= escape_javascript(render partial: "posts/show", locals: { post: @posts }) %>'
+
+modal.classList.remove('hidden')
+mask.classList.remove('hidden')
+
+mask.addEventListener('click', () => {
+  modal.classList.add('hidden')
+  mask.classList.add('hidden')
+})
+
+
+var pullDownButton = document.getElementById("open")
+var pullDownParents = document.getElementById("pull-down")
+var pullDownChild = document.getElementById("pull-down-list")
+
+pullDownButton.addEventListener('click', function() {
+
+  if (pullDownParents.getAttribute("style") == "display:block;") {  
+    pullDownParents.removeAttribute("style", "display:block;")
+  } else {  
+    pullDownParents.setAttribute("style", "display:block;")
+  }
+})
+
+
+pullDownChild.forEach(function(list) {
+  list.addEventListener('click', function() {
+    const value = list.innerHTML
+    currentList.innerHTML = value
+  })
+})

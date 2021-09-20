@@ -3,10 +3,16 @@
 <div class='main'>
   <%= @user.name %>
   <hr class="border-line" />
-
+  
   <ul class='post-lists'>
     <li class='list'>
-      <%= render partial: 'posts/post', collection: @posts %>
+      <%= render partial: 'posts/post', locals: {posts: @posts} %>
     </li>
   </ul>  
 </div>
+
+<div id="mask" class="hidden"></div>
+
+<div id="modal" class="hidden">
+</div>
+

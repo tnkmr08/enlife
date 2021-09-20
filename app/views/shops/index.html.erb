@@ -6,7 +6,12 @@
 
  <ul class='post-lists'>
    <li class='list'>
-     <%= render partial: 'posts/shop', collection: @shops %>
+     <%= render partial: 'posts/post', locals: {posts: @posts} %>
    </li>
  </ul>  
+</div>
+
+<div id="mask" class="hidden"></div>
+
+<div id="modal" class="hidden">
 </div>

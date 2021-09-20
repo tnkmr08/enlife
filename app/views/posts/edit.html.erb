@@ -1,0 +1,23 @@
+<div class='new-post'>
+    <h2 class='new-post-name'>新規投稿</h2>
+    <hr class="border-line" />
+    
+    <%= form_with model: @post, url: post_path, local: true do |f| %>
+    
+    <div class='category-select'>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select_box", id:"post_select"}) %>
+      <%= f.text_field :place_name, autofocus: true, placeholder: "例）カフェ・レジャー施設", class: "place-name" %>
+    </div> 
+
+    <div class='image-text'>
+      <div class='file-upload'>
+        <%= f.file_field :image, class: "post-image" %>
+      </div>
+      <%= f.text_area :text, class: "post-text" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "共有する", class: "submit" %>
+    </div>
+    <% end %>
+</div>

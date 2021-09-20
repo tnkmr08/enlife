@@ -1,0 +1,28 @@
+<%= image_tag @post.image, class: 'modal-img' %>
+<div class='modal-right'>
+  <div class='modalOpen'>
+    <%= link_to @post.user.name, user_path(@post.user.id)%>
+    <% if user_signed_in? && current_user.id == @post.user_id %>
+      <%= link_to '･･･', '#', id: 'open' %>
+      <ul class="modal-lists hid" id="pull-down">
+        <li id="pull-down-list">
+          <%= link_to "編集する", edit_post_path(@post.id) %>
+        </li>
+        <li id="pull-down-list">
+          <%= link_to "削除する", post_path(@post.id), method: :delete %>
+        </li>
+      </ul>
+    <%end%>  
+  </div>  
+  <hr class="borderLine" />
+  <div class='placeName'>
+    <%= @post.place_name %>
+  </div>  
+  <hr class="borderLine" />
+  <div class='modal-text'>
+    <%= @post.text %>
+  </div>    
+</div>  
+
+
+

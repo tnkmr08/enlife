@@ -1,1 +1,5 @@
-<%= image_tag post.image, class: 'img' %>
+<% posts.each do |post| %>
+  <%= link_to post_path(post.id), remote: true  do %>
+    <%= image_tag post.image, class: 'img', id: 'img' %> 
+  <%end%>  
+<%end%>
