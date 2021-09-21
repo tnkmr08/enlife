@@ -21,7 +21,15 @@
   <hr class="borderLine" />
   <div class='modal-text'>
     <%= @post.text %>
-  </div>    
+  </div> 
+  <hr class="borderLine" />
+  <div id="comments_area">
+    <%= render partial: 'comments/index', locals: { comments: @comments } %> 
+  </div>
+  <hr class="borderLine" />
+  <div class=commnet-btn>  
+    <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
+  </div>
 </div>  
 
 

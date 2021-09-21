@@ -1,0 +1,4 @@
+<%= form_with(model: [post, comment], url: post_comments_path(@post), local: false ) do |f| %>
+    <%= f.text_area :comment_text, class: "comment-write" %>
+    <%= f.submit "送信", class: "comment-submit" %>
+<% end %>

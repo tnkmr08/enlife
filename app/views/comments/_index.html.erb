@@ -1,0 +1,28 @@
+<div class="comments">
+  <% comments.each do |comment| %> 
+    <% unless comment.id.nil? %> 
+      <ul>
+        <li>
+        <div class="comment-list">
+          <div class="comment-user">
+            <%= link_to "@#{comment.user.name}", user_path(comment.user.id) %>
+          </div>
+          <div class="comment-text">
+            <%= comment.comment_text %>
+          </div>
+          <div class="comment-delete">
+            <% if comment.user == current_user %>
+              <%= link_to post_comment_path(comment.post_id, comment.id), method: :delete, remote: true, class: "comment_destroy" do %>
+                <%= image_tag "trash.png", size: "20x20", class: "delete" %>
+              <%end%>
+            <%end%>
+          </div>  
+        </div>  
+        </li>
+      </ul>
+   <%end%>  
+ <%end%>       
+</div>   
+<div class='sum'> 
+  <%= comments.count %>件コメント
+</div>  
