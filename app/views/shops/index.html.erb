@@ -1,14 +1,18 @@
-<%= render 'shared/header' %> 
-
-<div class='main'>
- <h2>shop</h2>
- <hr class="border-line" />
-
- <ul class='post-lists'>
-   <li class='list'>
-     <%= render partial: 'posts/post', locals: {posts: @posts} %>
-   </li>
- </ul>  
+<div class='bg-image'>
+  <div class='bg-mask'>
+    <div class='space'>
+      <%= link_to "EnLife", root_path, class: "title" %>
+      <div class='main'>
+        <div class='category'>shops</div>
+        <hr class="border-line" />
+        <ul class='post-lists'>
+          <li class='list'>
+            <%= render partial: 'posts/post', locals: {posts: @posts} %>
+          </li>
+        </ul>  
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="mask" class="hidden"></div>

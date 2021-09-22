@@ -1,47 +1,50 @@
-<%= render 'shared/header' %>
-
-
-  <div class='newest-post'> 
-    <%= link_to 'restaurant', restaurants_path, class: 'category-name' %>
-    <hr class="border" />
+<div class='background-image1'>
+  <div class='top-mask'>
+    <%= render 'shared/header' %>
+    <div class='newest-post'> 
+      <div class='category1'>  
+        <%= link_to 'Restaurants', restaurants_path, class: 'category-name1' %>  
+      </div>
+      <hr class="border" /> 
+      <div class='slider'>
+        <% @restaurants.each do |restaurant| %>        
+          <%= image_tag restaurant.image, class: 'post-img' %> 
+        <% end %>
+      </div> 
+    </div>
+  </div>
+</div>  
   
-    <div class='slider'>
-      <% @restaurants.each do |restaurant| %>        
-        <%= image_tag restaurant.image, class: 'post-img' %> 
-        <%#<%= link_to restaurant.user.name, user_path(restaurant.user.id) %>
-        <%#<%= restaurant.place_name %>   
-      <% end %>
-    </div>  
-  </div> 
+
  
-
-
-  <div class='newest-post'> 
-    <%= link_to 'shop', shops_path, class: 'category-name' %>
-    <hr class="border" />
-    
-    <div class='slider'>
-      <% @shops.each do |shop| %>
-      
-        <%= image_tag shop.image, class: 'post-img' %>
-        <%#<%= shop.place_name %>
-        <%#<%= link_to shop.user.name, user_path(shop.user.id) %>
-        
-      <% end %>
+<div class='background-image2'>
+  <div class='top-mask'>
+    <div class='blank'>
+      <div class='newest-post2'> 
+        <%= link_to 'shops', shops_path, class: 'category-name' %>
+        <hr class="border" />
+        <div class='slider'>
+          <% @shops.each do |shop| %>
+          <%= image_tag shop.image, class: 'post-img' %>      
+        <% end %>
+     </div>
     </div>
-  </div> 
+  </div>
+</div> 
 
 
+<div class='background-image3'>
+  <div class='top-mask'>
+    <div class='blank'>
+      <div class='newest-post2'> 
+        <%= link_to 'spots', spots_path, class: 'category-name' %>
+        <hr class="border-line" />
+        <div class='slider'>
+          <% @spots.each do |spot| %>        
+          <%= image_tag spot.image, class: 'post-img' %>
+        <% end %>
+      </div>
+    </div> 
+  </div>
+</div>  
 
-  <div class='newest-post'> 
-    <%= link_to 'spot', spots_path, class: 'category-name' %>
-    <hr class="border-line" />
-
-    <div class='slider'>
-      <% @spots.each do |spot| %>
-        <%#<%= link_to spot.user.name, user_path(spot.user.id) %>
-        <%#<%= spot.place_name %>
-        <%= image_tag spot.image, class: 'post-img' %>
-      <% end %>
-    </div>
-  </div> 

@@ -1,7 +1,10 @@
 /* ヘッダー */
 .header {
-  background-color: rgba(244, 245, 241, 0.767);
+  background-color: rgba(244, 245, 241, 0);
+  font-family: monospace;
+  font-size: 30px;
   padding: 20px 0;
+  
 }
 
 .nav {
@@ -12,22 +15,34 @@
 
 .logo {
   margin: 0 30px;
+  color: #ffffff;
 }
 
 .user-name {
-  margin: 0 10px;
+  margin: 0 35px;
+  color: #ffffff;
 }
 
 .post {
-  margin: 0 10px;
+  margin: 0 5px;
+  color: #ffffff;
 }
 
 .logout {
-  margin: 0 30px 0 10px;
+  margin: 0 25px 0 5px;
+  color: #ffffff;
 }
 
 
+
 /* ユーザー */
+.bg-image-user {
+  background-image: url('iphone.jpg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
 .box {
   width: 350px;
   height: 450px;
@@ -41,13 +56,10 @@
   text-align: center;
 }
 
-.h2 {
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 1.2;
+h2 {
   margin-bottom: 10px;
   padding-bottom: 4px;
-  color: #111111;
+  color: #696666;
 }
 
 .input-default {
@@ -68,13 +80,22 @@
 
 .login {
   color: #0000FF;
+  font-size: 15px;
 }
 
 .signup {
   color: #0000FF;
+  font-size: 15px;
 }
 
+
+
 /* ユーザー詳細 */
+.userName {
+  font-family: monospace;
+  font-size: 40px;
+}
+
 #mask {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -192,15 +213,45 @@
 
 
 /* 共通 */
+.bg-image {
+  background-image: url('background.png');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.bg-mask {
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
+
+.space {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-right: 1200px;
+}
+
+.main {
+  margin: 80px 220px 0;
+ 
+}
+
+.category {
+  font-size: 35px;
+}
+
 .border-line {
   border-width: 1px 0 0 0;
   margin: 10px 0px 20px 0px;
   border-style: solid;
   border-color: #ddd;
-}
-
-.main {
-  margin: 70px 220px 0;
 }
 
 .post-lists{
@@ -210,20 +261,90 @@
 .img {
   width: 250px;
   height: 255px;
+  float: left;
+	display: block;
 }
+
 
 
 /* トップページ */
-.newest-post {
-  margin: 200px auto 0;
-  width: 40%;
-  border-style: groove;
-  border-color: #825720;
-  border-width: 20px;
-  padding: 20px 30px 10px;
-
+.background-image1 {
+  background-image: url('restaurant.png');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  
 }
 
+.top-mask {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  width: 100vw;
+}
+
+.newest-post {
+  margin: 100px auto 0;
+  width: 40%;
+  height: 50%;
+  padding: 20px 30px 30px;
+  background-color: rgb(245, 235, 235, 0.3);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.category1 {
+  text-align: center;
+}
+
+.category-name1 {
+  
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.background-image2 {
+  background-image: url('shop.png');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.newest-post2 {
+  margin: 150px auto 0;
+  width: 40%;
+  height: 50%;
+  padding: 20px 30px 10px;
+  background-color: rgb(245, 235, 235, 0.3);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.blank {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.background-image3 {
+  background-image: url('spot.png');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+}
+
+.border {
+  width: 100%;
+  border-width: 1px 0 0 0;
+  margin: 10px 0px 20px 0px;
+  border-style: solid;
+  border-color: #ddd;
+}
+
+.category-name {
+  font-family: monospace;
+  font-size: 30px;
+  color: #ffffff;
+  
+}
 
 .slider{
   width: 100%;
@@ -231,13 +352,8 @@
 .post-img{
   height: 350px;
   width: 100%;
+}
 
-}
-/*slick setting*/
-.slick-prev:before,
-.slick-next:before {
-  color: #000;
-}
 
 
 /* 新規投稿ページ */
@@ -249,6 +365,11 @@
   border: 1px #ddd solid;
   padding: 20px 26px;
   text-align: center;
+  background-color: #ffffff;
+}
+
+.new {
+  font-size: 25px;
 }
 
 .category-select {
