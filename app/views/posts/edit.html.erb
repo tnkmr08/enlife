@@ -2,9 +2,10 @@
   <div class='bg-mask'>
     <div class='space'>
       <div class='new-post'>
-        <h2 class='new-post-name'>新規投稿</h2>
+        <h2 class='new-post-name'>Post Edit</h2>
         <hr class="border-line" />
         <%= form_with model: @post, url: post_path, local: true do |f| %>
+          <%= render partial: 'shared/error_messages', locals: {model: f.object} %>
           <div class='category-select'>
             <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select_box", id:"post_select"}) %>
             <%= f.text_field :place_name, autofocus: true, placeholder: "例）カフェ・レジャー施設", class: "place-name" %>
