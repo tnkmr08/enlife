@@ -8,11 +8,11 @@
           <%= render partial: 'shared/error_messages', locals: {model: f.object} %>
           <div class='category-select'>
             <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select_box", id:"post_select"}) %>
-            <%= f.text_field :place_name, autofocus: true, placeholder: "例）カフェ・レジャー施設", class: "place-name" %>
+            <%= f.file_field :image, class: "post-image" %>
           </div> 
           <div class='image-text'>
             <div class='file-upload'>
-              <%= f.file_field :image, class: "post-image" %>
+              <%= f.text_field :place_name, autofocus: true, placeholder: "例）カフェ・レジャー施設", class: "place-name" %>
             </div>
             <%= f.text_area :text, class: "post-text" %>
           </div>

@@ -2,7 +2,7 @@
   <div class='bg-mask'>
     <div class='space'>
       <div class='new-post'>
-        <h2 class='new-post-name'>Post Edit</h2>
+        <%= link_to 'Post Edit', user_path(@post.user.id), class: 'edit-post-name'%>
         <hr class="border-line" />
         <%= form_with model: @post, url: post_path, local: true do |f| %>
           <%= render partial: 'shared/error_messages', locals: {model: f.object} %>

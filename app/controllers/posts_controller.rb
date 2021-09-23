@@ -3,9 +3,9 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   
   def index
-    @restaurants = Post.where(category_id: '2')
-    @shops = Post.where(category_id: '3')
-    @spots = Post.where(category_id: '4')
+    @restaurants = Post.where(category_id: '2').order(created_at: :desc).limit(5).includes(:user)
+    @shops = Post.where(category_id: '3').order(created_at: :desc).limit(5).includes(:user)
+    @spots = Post.where(category_id: '4').order(created_at: :desc).limit(5).includes(:user)
   end
 
   def new
