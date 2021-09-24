@@ -1,5 +1,5 @@
 # アプリケーション名
-## EnLife   
+EnLife   
   
 # アプリケーション概要
 自分が行った場所で良かったお店やスポットを写真や文章で投稿してユーザーと共有するアプリケーションです。
@@ -23,7 +23,6 @@ URL： https://enlife.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/12b68375eb5c21c8858922233fae37e7.gif)](https://gyazo.com/12b68375eb5c21c8858922233fae37e7)  
 ・トップページでは、Restaurant(飲食店)、Shop(ショップ)、Spot(スポット)の３つの最新5件の投稿が画像を表示しています。また、それぞれのカテゴリー名をクリックすると各カテゴリー別投稿一覧ページに遷移します。   
 ・右上には、ユーザー名(ユーザー詳細ページ)・Post(新規投稿)・Logout(ログアウト)のボタンがあります。   
-   
 ## 新規投稿画面
 [![Image from Gyazo](https://i.gyazo.com/205f7c32d211ea4cc9beac436d25681d.jpg)](https://gyazo.com/205f7c32d211ea4cc9beac436d25681d)
 ・この新規投稿画面では、カテゴリーを選択して、投稿画像とお店やスポット名、そして投稿に関するコメント全てを入力することで共有できます。  
