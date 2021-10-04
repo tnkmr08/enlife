@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments, only: [:create, :destroy]
   end  
-  resources :restaurants, only: [:index]
-  resources :shops, only: [:index]
-  resources :spots, only: [:index]
+  resources :restaurants, only: [:index, :search]
+  resources :shops, only: [:index, :search]
+  resources :spots, only: [:index, :search]
 
 end
