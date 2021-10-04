@@ -20,7 +20,7 @@ URL： https://enlife.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/610b79d0ed9c4e78697e166e69214bfd.gif)](https://gyazo.com/610b79d0ed9c4e78697e166e69214bfd)
 ・ログインか新規登録をしないと、トップページに遷移できないようにしています。
 ## トップページ
-[![Image from Gyazo](https://i.gyazo.com/12b68375eb5c21c8858922233fae37e7.gif)](https://gyazo.com/12b68375eb5c21c8858922233fae37e7)  
+[![Image from Gyazo](https://i.gyazo.com/c5aeec3efa89afb0e6d069a94ea03732.gif)](https://gyazo.com/c5aeec3efa89afb0e6d069a94ea03732)
 ・トップページでは、Restaurant(飲食店)、Shop(ショップ)、Spot(スポット)の３つの最新5件の投稿が画像を表示しています。また、それぞれのカテゴリー名をクリックすると各カテゴリー別投稿一覧ページに遷移します。   
 ・右上には、ユーザー名(ユーザー詳細ページ)・Post(新規投稿)・Logout(ログアウト)のボタンがあります。   
 ## 新規投稿画面
@@ -28,7 +28,7 @@ URL： https://enlife.herokuapp.com/
 ・この新規投稿画面では、カテゴリーを選択して、投稿画像とお店やスポット名、そして投稿に関するコメント全てを入力することで共有できます。  
 「新規投稿」をクリックするとトップページに遷移します。
 ## ユーザー詳細画面
-[![Image from Gyazo](https://i.gyazo.com/18faee32cbeebc9e60329a73a217cf27.gif)](https://gyazo.com/18faee32cbeebc9e60329a73a217cf27)
+[![Image from Gyazo](https://i.gyazo.com/1f24a25d2b1507b481412e6d9d91abe7.gif)](https://gyazo.com/1f24a25d2b1507b481412e6d9d91abe7)
 ・そのユーザーが投稿した画像の一覧が表示されています。そして画像をクリックすると、その画像の詳細画面がモーダルウィンドウで表示されます。新規投稿画面で入力した内容のほかに「編集」や「投稿削除」できるボタンとユーザーからのコメントが追加されています。
 ## 投稿編集画面
 [![Image from Gyazo](https://i.gyazo.com/94eca5e1a727362e58dfbbc0d884d59e.jpg)](https://gyazo.com/94eca5e1a727362e58dfbbc0d884d59e)
